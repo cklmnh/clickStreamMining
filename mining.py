@@ -9,7 +9,11 @@ for x in range(0, 28): #there are 28 total files needed to read in
         file = open(fileDirectory + repr(x) + ".txt", "r")
 
     for line in file:
+        line = line[:-1]
         info.append(line.split(' '))
 
 
 #print info[5]
+
+for x in range(0, 50):
+    print info[x]
