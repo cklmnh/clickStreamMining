@@ -1,10 +1,11 @@
-line = "D00-MON 02:07:24 U16329 Z1678 U02390 y"#this is an example line, will eventually grab files to fill 2d array
+fileDirectory = "Webscope_G5/ydata-ymessenger-user-communication-pattern-v1_0/ydata-ymessenger-user-communication-pattern-v1_0-d00.txt"
 
-info = []
-info.append(line.split(' '))
-info.append(line.split(' '))
+file = open(fileDirectory, "r")#open file for reading based off of directory above
 
-time = info[0][1]
+info = []#2d array for info
 
-print(info)
-print(time)
+for line in file:
+    info.append(line.split(' '))
+
+print(info[5])
+print(len(info))
