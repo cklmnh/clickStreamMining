@@ -13,7 +13,8 @@ for x in range(0, 28): #there are 28 total files needed to read in
         info.append(line.split(' '))
 
 
-#print info[5]
+print len(info)
+print info[len(info)-1]
 
-for x in range(0, 50):
-    print info[x]
+# for x in range(0, 50):
+#     print info[x]
