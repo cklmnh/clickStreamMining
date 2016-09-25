@@ -10,6 +10,7 @@ def percentFriends(startIndex, stopIndex):
     return friends / (stopIndex - startIndex)
 
 for x in range(0, 1): #there are 28 total files needed to read in
+    start = len(info)
     if x < 10:
         file = open(fileDirectory + "0" + repr(x) + ".txt", "r")# open file for reading based off of directory above
     else:
@@ -19,8 +20,14 @@ for x in range(0, 1): #there are 28 total files needed to read in
         line = line[:-1]
         info.append(line.split(' '))
 
+    finish = len(info)
+
+    print(start,' ', finish)
+
+    #print(percentFriends(start, finish-1)*100,'% of people in file ',x+1,' are communicating with friends')
+
 #print(len(info))
-print(percentFriends(0, 100)*100,'% of people in the first file are communicating with friends')
+
 
 
 
